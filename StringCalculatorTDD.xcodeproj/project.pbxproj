@@ -6,6 +6,16 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		D3B977242E17DD6D00B048EC /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3B977212E17DD6D00B048EC /* ContentView.swift */; };
+		D3B977252E17DD6D00B048EC /* StringCalculatorTDDApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3B977222E17DD6D00B048EC /* StringCalculatorTDDApp.swift */; };
+		D3B977262E17DD6D00B048EC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D3B977202E17DD6D00B048EC /* Assets.xcassets */; };
+		D3B977292E17DD7300B048EC /* StringCalculatorTDDTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3B977272E17DD7300B048EC /* StringCalculatorTDDTests.swift */; };
+		D3B9772D2E17DD7700B048EC /* StringCalculatorTDDUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3B9772A2E17DD7700B048EC /* StringCalculatorTDDUITests.swift */; };
+		D3B9772E2E17DD7700B048EC /* StringCalculatorTDDUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3B9772B2E17DD7700B048EC /* StringCalculatorTDDUITestsLaunchTests.swift */; };
+		D3B977312E17DD8000B048EC /* StringCalculatorError.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3B977302E17DD8000B048EC /* StringCalculatorError.swift */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXContainerItemProxy section */
 		D3B977042E17D8E100B048EC /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -27,25 +37,14 @@
 		D3B976F62E17D8E000B048EC /* StringCalculatorTDD.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StringCalculatorTDD.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D3B977032E17D8E100B048EC /* StringCalculatorTDDTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = StringCalculatorTDDTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D3B9770D2E17D8E100B048EC /* StringCalculatorTDDUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = StringCalculatorTDDUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		D3B977202E17DD6D00B048EC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		D3B977212E17DD6D00B048EC /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		D3B977222E17DD6D00B048EC /* StringCalculatorTDDApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringCalculatorTDDApp.swift; sourceTree = "<group>"; };
+		D3B977272E17DD7300B048EC /* StringCalculatorTDDTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringCalculatorTDDTests.swift; sourceTree = "<group>"; };
+		D3B9772A2E17DD7700B048EC /* StringCalculatorTDDUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringCalculatorTDDUITests.swift; sourceTree = "<group>"; };
+		D3B9772B2E17DD7700B048EC /* StringCalculatorTDDUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringCalculatorTDDUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		D3B977302E17DD8000B048EC /* StringCalculatorError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringCalculatorError.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
-
-/* Begin PBXFileSystemSynchronizedRootGroup section */
-		D3B976F82E17D8E000B048EC /* StringCalculatorTDD */ = {
-			isa = PBXFileSystemSynchronizedRootGroup;
-			path = StringCalculatorTDD;
-			sourceTree = "<group>";
-		};
-		D3B977062E17D8E100B048EC /* StringCalculatorTDDTests */ = {
-			isa = PBXFileSystemSynchronizedRootGroup;
-			path = StringCalculatorTDDTests;
-			sourceTree = "<group>";
-		};
-		D3B977102E17D8E100B048EC /* StringCalculatorTDDUITests */ = {
-			isa = PBXFileSystemSynchronizedRootGroup;
-			path = StringCalculatorTDDUITests;
-			sourceTree = "<group>";
-		};
-/* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		D3B976F32E17D8E000B048EC /* Frameworks */ = {
@@ -75,9 +74,9 @@
 		D3B976ED2E17D8E000B048EC = {
 			isa = PBXGroup;
 			children = (
-				D3B976F82E17D8E000B048EC /* StringCalculatorTDD */,
-				D3B977062E17D8E100B048EC /* StringCalculatorTDDTests */,
-				D3B977102E17D8E100B048EC /* StringCalculatorTDDUITests */,
+				D3B977232E17DD6D00B048EC /* StringCalculatorTDD */,
+				D3B977282E17DD7300B048EC /* StringCalculatorTDDTests */,
+				D3B9772C2E17DD7700B048EC /* StringCalculatorTDDUITests */,
 				D3B976F72E17D8E000B048EC /* Products */,
 			);
 			sourceTree = "<group>";
@@ -90,6 +89,42 @@
 				D3B9770D2E17D8E100B048EC /* StringCalculatorTDDUITests.xctest */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		D3B977232E17DD6D00B048EC /* StringCalculatorTDD */ = {
+			isa = PBXGroup;
+			children = (
+				D3B977202E17DD6D00B048EC /* Assets.xcassets */,
+				D3B977212E17DD6D00B048EC /* ContentView.swift */,
+				D3B977222E17DD6D00B048EC /* StringCalculatorTDDApp.swift */,
+				D3B9772F2E17DD7A00B048EC /* Helper */,
+			);
+			path = StringCalculatorTDD;
+			sourceTree = "<group>";
+		};
+		D3B977282E17DD7300B048EC /* StringCalculatorTDDTests */ = {
+			isa = PBXGroup;
+			children = (
+				D3B977272E17DD7300B048EC /* StringCalculatorTDDTests.swift */,
+			);
+			path = StringCalculatorTDDTests;
+			sourceTree = "<group>";
+		};
+		D3B9772C2E17DD7700B048EC /* StringCalculatorTDDUITests */ = {
+			isa = PBXGroup;
+			children = (
+				D3B9772A2E17DD7700B048EC /* StringCalculatorTDDUITests.swift */,
+				D3B9772B2E17DD7700B048EC /* StringCalculatorTDDUITestsLaunchTests.swift */,
+			);
+			path = StringCalculatorTDDUITests;
+			sourceTree = "<group>";
+		};
+		D3B9772F2E17DD7A00B048EC /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				D3B977302E17DD8000B048EC /* StringCalculatorError.swift */,
+			);
+			path = Helper;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -106,9 +141,6 @@
 			buildRules = (
 			);
 			dependencies = (
-			);
-			fileSystemSynchronizedGroups = (
-				D3B976F82E17D8E000B048EC /* StringCalculatorTDD */,
 			);
 			name = StringCalculatorTDD;
 			packageProductDependencies = (
@@ -130,9 +162,6 @@
 			dependencies = (
 				D3B977052E17D8E100B048EC /* PBXTargetDependency */,
 			);
-			fileSystemSynchronizedGroups = (
-				D3B977062E17D8E100B048EC /* StringCalculatorTDDTests */,
-			);
 			name = StringCalculatorTDDTests;
 			packageProductDependencies = (
 			);
@@ -152,9 +181,6 @@
 			);
 			dependencies = (
 				D3B9770F2E17D8E100B048EC /* PBXTargetDependency */,
-			);
-			fileSystemSynchronizedGroups = (
-				D3B977102E17D8E100B048EC /* StringCalculatorTDDUITests */,
 			);
 			name = StringCalculatorTDDUITests;
 			packageProductDependencies = (
@@ -212,6 +238,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D3B977262E17DD6D00B048EC /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -236,6 +263,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D3B977242E17DD6D00B048EC /* ContentView.swift in Sources */,
+				D3B977252E17DD6D00B048EC /* StringCalculatorTDDApp.swift in Sources */,
+				D3B977312E17DD8000B048EC /* StringCalculatorError.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -243,6 +273,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D3B977292E17DD7300B048EC /* StringCalculatorTDDTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -250,6 +281,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D3B9772D2E17DD7700B048EC /* StringCalculatorTDDUITests.swift in Sources */,
+				D3B9772E2E17DD7700B048EC /* StringCalculatorTDDUITestsLaunchTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -393,8 +426,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = "";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -409,6 +443,7 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.example.StringCalculatorTDD;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -420,8 +455,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = "";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -436,6 +472,7 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.example.StringCalculatorTDD;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
