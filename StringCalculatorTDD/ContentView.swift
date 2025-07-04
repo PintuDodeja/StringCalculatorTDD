@@ -23,7 +23,7 @@ struct ContentView: View {
                 .ignoresSafeArea()
 
             VStack(spacing: 30) {
-                Text("🧮 \(StringConstant.title)")
+                Text(StringConstant.title)
                     .font(.system(size: 36, weight: .bold, design: .rounded))
                     .foregroundStyle(.blue)
                     .shadow(color: .black.opacity(0.2), radius: 5, x: 0, y: 3)
