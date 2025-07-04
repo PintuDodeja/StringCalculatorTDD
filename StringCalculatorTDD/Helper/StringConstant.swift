@@ -13,4 +13,6 @@ struct StringConstant {
     static let calculate = "Calculate"
     static let result = "Result"
     static let negativeNumberErrorMessage = "Negative numbers not allowed"
+    static let invalidDelimiterErrorMessage = "Invalid delimiter character"
+    static let invalidRegexErrorMessage = "Invalid regular expression pattern"
 }

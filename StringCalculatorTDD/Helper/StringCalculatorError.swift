@@ -10,11 +10,17 @@ import Foundation
 
 enum StringCalculatorError: Error, LocalizedError {
     case negativeNumbersNotAllowed([Int])
+    case invalidDelimiterCharacter(Character)
+    case invalidRegexPattern(String)
 
     var errorDescription: String? {
         switch self {
         case .negativeNumbersNotAllowed(let numbers):
-            return "Negative numbers not allowed: \(numbers.map(String.init).joined(separator: ","))"
+            return "\(StringConstant.negativeNumberErrorMessage): \(numbers.map(String.init).joined(separator: ","))"
+        case .invalidDelimiterCharacter(let char):
+            return "\(StringConstant.invalidDelimiterErrorMessage): \(char)"
+        case .invalidRegexPattern(let pattern):
+            return "\(StringConstant.invalidRegexErrorMessage): \(pattern)"
         }
     }
 }
@@ -35,13 +41,15 @@ class StringCalculator {
         
         print("Numbers ->", numbersSection)
         
+        // Now proceed with delimiter parsing (regex part)
         if sanitizedInput.hasPrefix("//") {
             let delimiterEndIndex = sanitizedInput.range(of: "\n")!.lowerBound
             let delimiterSection = String(sanitizedInput[sanitizedInput.index(sanitizedInput.startIndex, offsetBy: 2)..<delimiterEndIndex])
             numbersSection = String(sanitizedInput[sanitizedInput.index(after: delimiterEndIndex)...])
 
             let pattern = #"\[(.*?)\]"#
-            if let regex = try? NSRegularExpression(pattern: pattern) {
+            do {
+                let regex = try NSRegularExpression(pattern: pattern)
                 let matches = regex.matches(in: delimiterSection, range: NSRange(location: 0, length: delimiterSection.utf16.count))
                 if matches.isEmpty {
                     delimiters = [delimiterSection]
@@ -53,19 +61,36 @@ class StringCalculator {
                         return nil
                     }
                 }
+            } catch {
+                throw StringCalculatorError.invalidRegexPattern(pattern)
             }
         }
 
+        // Combine delimiters into a single regex pattern
         let pattern = delimiters.map { NSRegularExpression.escapedPattern(for: $0) }.joined(separator: "|")
-        let regex = try! NSRegularExpression(pattern: pattern)
-        let replaced = regex.stringByReplacingMatches(in: numbersSection, range: NSRange(numbersSection.startIndex..., in: numbersSection), withTemplate: ",")
-        let values = replaced.components(separatedBy: ",").compactMap { Int($0) }
-
+        
+        // Ensure the pattern is valid before using it
+        if pattern.isEmpty {
+            throw StringCalculatorError.invalidRegexPattern("Pattern is empty or invalid.")
+        }
+        
+        // First, check for negative numbers before processing regex
+        let values = numbersSection.components(separatedBy: ",").compactMap { Int($0) }
         let negatives = values.filter { $0 < 0 }
         if !negatives.isEmpty {
             throw StringCalculatorError.negativeNumbersNotAllowed(negatives)
         }
 
-        return values.reduce(0, +)
+        // Attempt to create the regular expression
+        do {
+            let regex = try NSRegularExpression(pattern: pattern)
+            let replaced = regex.stringByReplacingMatches(in: numbersSection, range: NSRange(numbersSection.startIndex..., in: numbersSection), withTemplate: ",")
+            let finalValues = replaced.components(separatedBy: ",").compactMap { Int($0) }
+
+            return finalValues.reduce(0, +)
+        } catch {
+            // Catch and throw any regex-related errors here
+            throw StringCalculatorError.invalidRegexPattern(pattern)
+        }
     }
 }
