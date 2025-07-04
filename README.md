@@ -2,7 +2,7 @@
 
 A simple and interactive SwiftUI app built with **Test-Driven Development (TDD)** principles. This app takes a string of numbers separated by delimiters and returns their sum. Inspired by the classic **String Calculator Kata**!
 
-![App Demo](assets/app-demo.png)
+![App Demo](StringCalculatorTDD/assets/app-demo.png)
 
 ---
 
@@ -20,20 +20,20 @@ A simple and interactive SwiftUI app built with **Test-Driven Development (TDD)*
 
 ### 🌟 Home Screen
 
-![Home Screen](assets/home-screen.png)
+![Home Screen](StringCalculatorTDD/assets/home-screen.png)
 
 ### 🟢 Button Animation
-![Button Animation](assets/animation-start.gif)
-![Button Animation](assets/animation-middle.gif)
-![Button Animation](assets/animation-end.gif)
+![Button Animation](StringCalculatorTDD/assets/animation-start.gif)
+![Button Animation](StringCalculatorTDD/assets/animation-middle.gif)
+![Button Animation](StringCalculatorTDD/assets/animation-end.gif)
 
 ### ✅ Success Result
 
-![Success Result](assets/success-result.png)
+![Success Result](StringCalculatorTDD/assets/success-result.png)
 
 ### ❌ Error Handling
 
-![Error Result](assets/error-result.png)
+![Error Result](StringCalculatorTDD/assets/error-result.png)
 
 ---
 
@@ -88,7 +88,7 @@ Pintu Dodeja
 
 💼 LinkedIn - [Pintu Dodeja](https://www.linkedin.com/in/pintu-dodeja)
 
-📧 dodeja.pintu@gmail.com
+📧 [Pintu Dodeja](dodeja.pintu@gmail.com)
 
 🪪 License
 MIT License. See LICENSE file for details.
