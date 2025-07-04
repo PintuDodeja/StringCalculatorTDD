@@ -9,28 +9,54 @@ import XCTest
 @testable import StringCalculatorTDD
 
 final class StringCalculatorTDDTests: XCTestCase {
-
-    override func setUpWithError() throws {
-        // Put setup code here. This method is called before the invocation of each test method in the class.
+    
+    var calculator: StringCalculator!
+    
+    override func setUp() {
+        super.setUp()
+        calculator = StringCalculator()
     }
-
-    override func tearDownWithError() throws {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
+    
+    func testEmptyStringReturnsZero() throws {
+        XCTAssertEqual(try calculator.add(""), 0)
     }
-
-    func testExample() throws {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
-        // Any test you write for XCTest can be annotated as throws and async.
-        // Mark your test throws to produce an unexpected failure when your test encounters an uncaught error.
-        // Mark your test async to allow awaiting for asynchronous code to complete. Check the results with assertions afterwards.
+    
+    func testSingleNumberReturnsValue() throws {
+        XCTAssertEqual(try calculator.add("1"), 1)
     }
-
-    func testPerformanceExample() throws {
-        // This is an example of a performance test case.
-        self.measure {
-            // Put the code you want to measure the time of here.
+    
+    func testTwoNumbersCommaDelimitedReturnsSum() throws {
+        XCTAssertEqual(try calculator.add("1,2"), 3)
+    }
+    
+    func testMultipleNumbersCommaDelimitedReturnsSum() throws {
+        XCTAssertEqual(try calculator.add("1,2,3,4,5"), 15)
+    }
+    
+    func testNumbersWithNewlineAndComma() throws {
+        XCTAssertEqual(try calculator.add("1\n2,3"), 6)
+    }
+    
+    func testCustomDelimiterSemicolon() throws {
+        XCTAssertEqual(try calculator.add("//;\n1;2"), 3)
+    }
+    
+    func testCustomDelimiterPipe() throws {
+        XCTAssertEqual(try calculator.add("//|\n1|2|3"), 6)
+    }
+    
+    func testNegativeNumberThrowsError() {
+        XCTAssertThrowsError(try calculator.add("-1")) { error in
+            guard let error = error as? StringCalculatorError else { return XCTFail() }
+            XCTAssertEqual(error.localizedDescription, "\(StringConstant.negativeNumberErrorMessage): -1")
         }
     }
-
+    
+    func testMultipleNegativeNumbersThrowAll() {
+        XCTAssertThrowsError(try calculator.add("2,-4,3,-5")) { error in
+            guard let error = error as? StringCalculatorError else { return XCTFail() }
+            XCTAssertEqual(error.localizedDescription, "\(StringConstant.negativeNumberErrorMessage): -4,-5")
+        }
+    }
+    
 }

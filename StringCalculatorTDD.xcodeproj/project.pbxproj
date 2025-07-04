@@ -14,6 +14,7 @@
 		D3B9772D2E17DD7700B048EC /* StringCalculatorTDDUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3B9772A2E17DD7700B048EC /* StringCalculatorTDDUITests.swift */; };
 		D3B9772E2E17DD7700B048EC /* StringCalculatorTDDUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3B9772B2E17DD7700B048EC /* StringCalculatorTDDUITestsLaunchTests.swift */; };
 		D3B977312E17DD8000B048EC /* StringCalculatorError.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3B977302E17DD8000B048EC /* StringCalculatorError.swift */; };
+		D3B977342E17EB7D00B048EC /* StringConstant.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3B977332E17EB7700B048EC /* StringConstant.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +45,7 @@
 		D3B9772A2E17DD7700B048EC /* StringCalculatorTDDUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringCalculatorTDDUITests.swift; sourceTree = "<group>"; };
 		D3B9772B2E17DD7700B048EC /* StringCalculatorTDDUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringCalculatorTDDUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		D3B977302E17DD8000B048EC /* StringCalculatorError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringCalculatorError.swift; sourceTree = "<group>"; };
+		D3B977332E17EB7700B048EC /* StringConstant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringConstant.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -122,6 +124,7 @@
 		D3B9772F2E17DD7A00B048EC /* Helper */ = {
 			isa = PBXGroup;
 			children = (
+				D3B977332E17EB7700B048EC /* StringConstant.swift */,
 				D3B977302E17DD8000B048EC /* StringCalculatorError.swift */,
 			);
 			path = Helper;
@@ -263,6 +266,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D3B977342E17EB7D00B048EC /* StringConstant.swift in Sources */,
 				D3B977242E17DD6D00B048EC /* ContentView.swift in Sources */,
 				D3B977252E17DD6D00B048EC /* StringCalculatorTDDApp.swift in Sources */,
 				D3B977312E17DD8000B048EC /* StringCalculatorError.swift in Sources */,
