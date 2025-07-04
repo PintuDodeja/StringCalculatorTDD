@@ -68,30 +68,30 @@ The UI is built with SwiftUI and includes animations, focus state handling, and 
 open StringCalculatorTDD.xcodeproj
 
 📋 Requirements
-iOS 15.0+
+- iOS 15.0+
 
-Xcode 15+
+- Xcode 15+
 
-Swift 5.9+
+- Swift 5.9+
 
 🧪 Testing
 This project follows TDD principles. All core logic is unit tested.
 
 To run tests:
 
-Open the project in Xcode
+- Open the project in Xcode
 
-Use the ⌘ + U shortcut to run tests
+- Use the ⌘ + U shortcut to run tests
 
 👨‍💻 Author
 Pintu Dodeja
 
-💼 LinkedIn - [Pintu Dodeja](https://www.linkedin.com/in/pintu-dodeja)
+- 💼 LinkedIn - [Pintu Dodeja](https://www.linkedin.com/in/pintu-dodeja)
 
-📧 [Pintu Dodeja](dodeja.pintu@gmail.com)
+- 📧 [Pintu Dodeja](dodeja.pintu@gmail.com)
 
 🪪 License
-MIT License. See LICENSE file for details.
+- MIT License. See LICENSE file for details.
 
 🙌 Contributions
 Feel free to open issues or submit pull requests. Feedback and ideas are welcome!
