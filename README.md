@@ -86,9 +86,9 @@ Use the ⌘ + U shortcut to run tests
 👨‍💻 Author
 Pintu Dodeja
 
-💼 LinkedIn
+💼 LinkedIn - https://www.linkedin.com/in/pintu-dodeja
 
-📧 pintudodeja@example.com
+📧 dodeja.pintu@gmail.com
 
 🪪 License
 MIT License. See LICENSE file for details.
