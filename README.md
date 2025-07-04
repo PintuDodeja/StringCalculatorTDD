@@ -23,9 +23,9 @@ A simple and interactive SwiftUI app built with **Test-Driven Development (TDD)*
 ![Home Screen](StringCalculatorTDD/assets/home-screen.png)
 
 ### 🟢 Button Animation
-![Button Animation](StringCalculatorTDD/assets/animation-start.gif)
-![Button Animation](StringCalculatorTDD/assets/animation-middle.gif)
-![Button Animation](StringCalculatorTDD/assets/animation-end.gif)
+![Button Animation](StringCalculatorTDD/assets/animation-start.png)
+![Button Animation](StringCalculatorTDD/assets/animation-middle.png)
+![Button Animation](StringCalculatorTDD/assets/animation-end.png)
 
 ### ✅ Success Result
 
