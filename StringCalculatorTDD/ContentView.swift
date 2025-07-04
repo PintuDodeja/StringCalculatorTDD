@@ -23,15 +23,28 @@ struct ContentView: View {
                 .ignoresSafeArea()
 
             VStack(spacing: 30) {
-                Text(StringConstant.title)
-                    .font(.system(size: 36, weight: .bold, design: .rounded))
-                    .foregroundStyle(.blue)
-                    .shadow(color: .black.opacity(0.2), radius: 5, x: 0, y: 3)
-                    .onChange(of: input) { _, _ in
-                        withAnimation {
-                            showResult = false
+                if #available(iOS 17.0, *) {
+                    Text(StringConstant.title)
+                        .font(.system(size: 36, weight: .bold, design: .rounded))
+                        .foregroundStyle(.blue)
+                        .shadow(color: .black.opacity(0.2), radius: 5, x: 0, y: 3)
+                        .onChange(of: input) { _, _ in
+                            withAnimation {
+                                showResult = false
+                            }
                         }
-                    }
+                } else {
+                    // Fallback on earlier versions
+                    Text(StringConstant.title)
+                        .font(.system(size: 36, weight: .bold, design: .rounded))
+                        .foregroundStyle(.blue)
+                        .shadow(color: .black.opacity(0.2), radius: 5, x: 0, y: 3)
+                        .onChange(of: input) { newValue in
+                            withAnimation {
+                                showResult = false
+                            }
+                        }
+                }
 
                 TextField(StringConstant.exampleInput, text: $input)
                     .padding()
