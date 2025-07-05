@@ -2,7 +2,7 @@
 
 A simple and interactive SwiftUI app built with **Test-Driven Development (TDD)** principles. This app takes a string of numbers separated by delimiters and returns their sum. Inspired by the classic **String Calculator Kata**!
 
-![App Demo](StringCalculatorTDD/assets/Screen-Recording.mp4)
+![App Demo](StringCalculatorTDD/assets/Screen-Recording.gif)
 
 ---
 
